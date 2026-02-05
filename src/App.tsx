@@ -23,7 +23,7 @@ type ChatMessage = {
   createdAt: string;
 };
 
-const API_BASE = process.env.API_BASE || "http://localhost:8080";
+const API_BASE = "https://chat-app-backend-v3-w2an.onrender.com";
 
 const App = () => {
   const [loginEmail, setLoginEmail] = useState("");
