@@ -1,5 +1,11 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { io, Socket } from "socket.io-client";
+import dotenv from 'dotenv';
+
+
+dotenv.config();
+
+
 
 type User = {
   id: string;
@@ -17,7 +23,7 @@ type ChatMessage = {
   createdAt: string;
 };
 
-const API_BASE = "http://localhost:8080";
+const API_BASE = process.env.API_BASE || "http://localhost:8080";
 
 const App = () => {
   const [loginEmail, setLoginEmail] = useState("");
